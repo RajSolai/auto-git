@@ -3,19 +3,14 @@ figlet -c "AUTO git"
 test -d ".git"
 if [ $? -eq 0 ]; then
     echo "😍 This a Git Directory hurray !"
-    read -p "❓❓ Ready to PUSH (Y | N ) :" pushoption
-    if [ $pushoption=="Y" ]; then
-        echo "🔥 Adding all files to be pushed...."
-        git add .
-        read -p "👉 Enter the Commit Message :" commit_message
-        git commit -m $commit_message
-        git push origin master
+    read -p "❓❓ Ready to PUSH ( PRESS ENTER TO CONTINUE ) :" 
+    echo "🔥 Adding all files to be pushed...."
+    git add .
+    read -p "👉 Enter the Commit Message :" commit_message
+    git commit -m $commit_message
+    git push origin master
     if [ $? -eq 0 ]; then
         echo "💥 💥Repo Commited SuccessFully ! 💥 💥"
-    fi
-    else 
-        echo "🤔 No Pushing Today ?"
-        echo "😴 Good Bye , Let me Relax"
     fi
 else
     echo "😭 This doesnt seem to be a GIT Directory"
