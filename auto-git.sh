@@ -3,7 +3,7 @@ figlet -c "AUTO git"
 test -d ".git"
 if [ $? -eq 0 ]; then
     echo "😍 This a Git Directory hurray !"
-    read -p "❓❓ Ready to PUSH ( PRESS ENTER TO CONTINUE ) :" 
+    read -p "PRESS ENTER TO CONTINUE Pushing" temp
     echo "🔥 Adding all files to be pushed...."
     git add .
     read -p "👉 Enter the Commit Message :" commit_message
